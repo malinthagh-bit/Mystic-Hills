@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,11 +30,12 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur border-b border-white/10">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-4">
 
+          {/* LOGO */}
           <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-[4px] text-amber-400">
             MYSTIC HILLS
           </h1>
 
-          {/* Desktop menu */}
+          {/* DESKTOP MENU */}
           <div className="hidden md:flex gap-8 text-sm uppercase tracking-wider">
             <a href="#about" className="hover:text-amber-400">About</a>
             <a href="#rooms" className="hover:text-amber-400">Rooms</a>
@@ -41,7 +43,29 @@ export default function Home() {
             <a href="#location" className="hover:text-amber-400">Location</a>
             <a href="#contact" className="hover:text-amber-400">Contact</a>
           </div>
+
+          {/* HAMBURGER BUTTON */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-2xl text-white"
+          >
+            {open ? "✕" : "☰"}
+          </button>
+
         </div>
+
+        {/* MOBILE DROPDOWN */}
+        {open && (
+          <div className="md:hidden bg-black/95 border-t border-white/10 px-6 py-5 flex flex-col gap-5 text-sm uppercase tracking-wider">
+
+            <a onClick={() => setOpen(false)} href="#about">About</a>
+            <a onClick={() => setOpen(false)} href="#rooms">Rooms</a>
+            <a onClick={() => setOpen(false)} href="#gallery">Gallery</a>
+            <a onClick={() => setOpen(false)} href="#location">Location</a>
+            <a onClick={() => setOpen(false)} href="#contact">Contact</a>
+
+          </div>
+        )}
       </nav>
 
       {/* HERO */}
