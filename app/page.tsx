@@ -73,7 +73,7 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-cover bg-center relative px-4"
         style={{
           backgroundImage:
-            "url('/images/1.jpg')",
+            "url('/images/add.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
