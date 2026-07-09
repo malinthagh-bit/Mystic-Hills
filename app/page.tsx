@@ -236,6 +236,12 @@ export default function Home() {
     <p className="text-gray-300 text-sm sm:text-base flex items-center justify-center gap-2">
       📞 <span className="hover:text-white transition">+44 7939 386959</span>
     </p>
+    {/* Phone */}
+   <p className="text-gray-300 text-sm sm:text-base flex items-center justify-center gap-2">
+  ✉️ <span className="hover:text-white transition">
+    mystichillsheerassagala@gmail.com
+  </span>
+</p>
 
     {/* Airbnb Link */}
     <a
