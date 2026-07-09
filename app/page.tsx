@@ -73,7 +73,7 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-cover bg-center relative px-4"
         style={{
           backgroundImage:
-            "url('https://a0.muscache.com/im/pictures/hosting/Hosting-1621548395702991343/original/fe91d358-8407-4812-b6b5-fdb05d643c7f.jpeg?im_w=960')",
+            "url('/images/1.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
