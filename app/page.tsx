@@ -76,7 +76,7 @@ export default function Home() {
             "url('/images/add.png')",
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative text-center max-w-3xl">
           <p className="text-amber-400 tracking-[6px] sm:tracking-[8px] uppercase text-xs sm:text-sm">
